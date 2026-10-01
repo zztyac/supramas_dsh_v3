@@ -27,9 +27,10 @@
                 claim you make must trace to a paper chunk saved under the run's `papers_dir`.
                 When evidence is thin, say so and record the gap instead of filling it in.
 
-                Prefer the project's own workflows over ad-hoc scripting: read `AGENTS.md`, keep
-                `runs/{job_id}/tree_state.json` current, and delegate node construction and
-                review to the role tools instead of doing both sides yourself.
+                Prefer the project's own workflows over ad-hoc scripting. Load the
+                `supramas-project-contract` skill for the execution model, roles, and stage
+                workflows; keep `runs/{job_id}/tree_state.json` current; and delegate node
+                construction and review to the role tools instead of doing both sides yourself.
           - id: agent-instructions
             name: '@deepseek-ai/dsh-agent-instructions'
             config:
