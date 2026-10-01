@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="SupraMAS">
+  <rect width="64" height="64" rx="12" fill="#0f2f4f"/>
+  <g stroke="#5fd0c8" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M32 14v10"/>
+    <path d="M32 24H18v8"/>
+    <path d="M32 24h14v8"/>
+    <path d="M18 32v6"/>
+    <path d="M32 24v14"/>
+    <path d="M46 32v6"/>
+  </g>
+  <g fill="#5fd0c8">
+    <circle cx="32" cy="12" r="4.5"/>
+    <circle cx="18" cy="41" r="4"/>
+    <circle cx="32" cy="41" r="4"/>
+    <circle cx="46" cy="41" r="4"/>
+  </g>
+  <circle cx="32" cy="24" r="3" fill="#f2b544"/>
+</svg>

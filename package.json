@@ -1,0 +1,41 @@
+{
+  "name": "supramas-dsh",
+  "version": "0.1.0",
+  "description": "SupraMAS materials-science research mode: literature-grounded strategy-tree mining and evidence-traced superconducting materials idea design for DeepSeek Harness",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./presets/*.patch.yml": "./presets/*.patch.yml",
+    "./assets/*": "./assets/*",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "agents",
+    "presets",
+    "assets",
+    "locale/*.json",
+    "cordis.patch.yml",
+    "icon.svg"
+  ],
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml",
+        "./presets/materials-research.patch.yml"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zztyac/supramas_dsh_v3.git"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-skill": "0.2.0-rc.2"
+  }
+}
