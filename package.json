@@ -19,7 +19,8 @@
     "locale/*.json",
     "cordis.patch.yml",
     "icon.svg",
-    "install.py"
+    "install.py",
+    "README.md"
   ],
   "icon": "./icon.svg",
   "license": "MIT",

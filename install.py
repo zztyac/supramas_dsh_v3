@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Register supramas-dsh as a DeepSeek Harness profile bundle.
+"""Install supramas-dsh into a DeepSeek Harness profile, and register it as a bundle.
 
-`dsh plugin --profile <p> add <pkg>` only installs the package with pnpm. The
-profile must also list it under `dsh.profile.bundles` before the harness loads
-its patches and preset, and there is no `dsh` subcommand for that second step
-(the GUI's Plugin Manager does both, but a headless or agent-driven install has
-to do it here).
-
-Run it after `dsh plugin add`:
+**Normally you do not need this.** `dsh plugin --profile <p> add <source>`
+registers a public (non-`private`) package under `dsh.profile.bundles` by itself,
+so the whole install is:
 
     dsh plugin --profile desktop add git+ssh://git@github.com/zztyac/supramas_dsh_v3.git
-    python3 <installed-package>/install.py --profile desktop
 
-Idempotent, and it backs up the profile manifest before writing.
+Use this script when that did not happen — most often because the package was
+installed while it still declared `"private": true`, which suppresses the
+automatic registration:
+
+    python3 <installed-package>/install.py --profile desktop     # install + register
+    python3 <installed-package>/install.py --profile desktop --register-only
+
+It is idempotent, reports what it would change under `--dry-run`, and backs up the
+profile manifest before writing. Delegate to `dsh plugin add` for the pnpm step so
+the profile's own lockfile and store stay authoritative.
 """
 
 from __future__ import annotations
