@@ -18,7 +18,8 @@
     "assets",
     "locale/*.json",
     "cordis.patch.yml",
-    "icon.svg"
+    "icon.svg",
+    "install.py"
   ],
   "icon": "./icon.svg",
   "license": "MIT",
